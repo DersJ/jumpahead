@@ -3,8 +3,13 @@ Online platform for JumpAhead program
 
 ## Local Development Setup:
 
+### Make sure you have Python 3.7.x installed
+Whatever the latest 3.7 version is should be fine.
+
 ### Set up a virutal environment (Optional, but recommended)
 Using a virtual environment is beneficial for a variety of reasons, but primarily, it will create a separate python installation for you to use just for this project. This way, the requirements you install won't affect your OS's default python installation.
+
+Note: This is for MacOS & Linux. I'm not sure what the workflow looks like on PC
 
 1. Install [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html): `pip install virutalenvwrapper`
 2. Add the following to your shell startup file:
