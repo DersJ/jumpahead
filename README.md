@@ -21,6 +21,10 @@ source /usr/local/bin/virtualenvwrapper.sh
 3. Create a python 3.7 virtualenv: `mkvirtualenv jumpahead --python=python3`
 Use `workon jumpahead` to activate your virtual environment, `deactivate` to deactivate
 
+### Make sure you have `pg_config` installed
+- On Mac run `brew install postgresql`
+- On Ubuntu run `sudo apt-get install libpq-dev`
+
 ### Clone the repo and install requirements
 1. `git clone git@github.com:DersJ/jumpahead.git`
 2. `cd jumpahead && pip install -r requirements.txt`
