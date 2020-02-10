@@ -11,7 +11,7 @@ Using a virtual environment is beneficial for a variety of reasons, but primaril
 
 Note: This is for MacOS & Linux. I'm not sure what the workflow looks like on PC
 
-1. Install [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html): `pip install virutalenvwrapper`
+1. Install [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html): `pip install virtualenvwrapper`
 2. Add the following to your shell startup file:
 ```
 export WORKON_HOME=$HOME/.virtualenvs
