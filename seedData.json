@@ -1,0 +1,50 @@
+[
+    {
+        "model": "modules.module",
+        "pk": 3,
+        "fields": {
+            "video_link": "https://www.youtube.com/watch?v=yfgsklK_yFo",
+            "title": "Module 1: Hello World!",
+            "created": "2020-02-22",
+            "last_updated": "2020-02-22",
+            "description": "A description",
+            "task_list": null
+        }
+    },
+    {
+        "model": "modules.module",
+        "pk": 5,
+        "fields": {
+            "video_link": "https://www.youtube.com/watch?v=7YcW25PHnAA",
+            "title": "Module 2: another test",
+            "created": "2020-02-22",
+            "last_updated": "2020-02-22",
+            "description": "Here is a description",
+            "task_list": null
+        }
+    },
+    {
+        "model": "modules.module",
+        "pk": 6,
+        "fields": {
+            "video_link": "https://www.youtube.com/watch?v=Q-BpqyOT3a8",
+            "title": "Module 3: test 3",
+            "created": "2020-02-22",
+            "last_updated": "2020-02-22",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac vehicula ante. Sed tincidunt erat eu nulla ultrices accumsan. Sed egestas interdum rutrum. Morbi consequat sit amet neque vitae tincidunt. Etiam quam justo, commodo ut urna vestibulum, aliquam luctus purus. Etiam accumsan, tellus vitae maximus tempus, erat quam condimentum tortor, eu sagittis purus diam in dolor. In tincidunt dui id orci sollicitudin, at rhoncus orci mollis. Cras non convallis ex. Nunc augue felis, commodo ac arcu non, porttitor sollicitudin ex. Phasellus purus ex, dignissim vitae mi ac, finibus venenatis tortor. Nullam eu nulla quis sapien pharetra pharetra. Phasellus hendrerit porta orci, sit amet feugiat nulla congue nec.\r\n\r\nAliquam quis neque pretium, vestibulum nisl sit amet, auctor erat. Quisque a est varius, lacinia tellus ut, ultrices ipsum. Sed ut pulvinar sem. Pellentesque et pulvinar mauris. In lacus purus, mattis in mauris nec, aliquet facilisis ipsum. Sed blandit est at dui semper, et volutpat ligula ullamcorper. Aliquam a nulla ex. Cras sed diam a dolor semper venenatis eu porttitor ligula. Sed faucibus libero ut dictum bibendum. Mauris lacus ipsum, venenatis vitae libero vitae, faucibus pharetra tortor. Sed ullamcorper dapibus leo eget egestas. Nulla aliquet ac magna et venenatis. Sed fringilla nisl mattis dolor rutrum pulvinar. Fusce finibus in augue vitae viverra. Phasellus mattis maximus eros, vel hendrerit lacus euismod ac. Suspendisse blandit vestibulum dolor.",
+            "task_list": null
+        }
+    },
+    {
+        "model": "modules.module",
+        "pk": 7,
+        "fields": {
+            "video_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "title": "Module 4",
+            "created": "2020-02-22",
+            "last_updated": "2020-02-22",
+            "description": "never gonna give you up...",
+            "task_list": null
+        }
+    }
+]
