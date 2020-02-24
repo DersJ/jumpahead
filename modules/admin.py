@@ -4,11 +4,13 @@ from django.contrib import admin
 
 from .models import *
 
+
 class ModuleAdmin(admin.ModelAdmin):
     list_display = ["title", "video_link", "last_updated", "created", "course"]
 
     class Meta:
         model = Module
+
 
 class CourseAdmin(admin.ModelAdmin):
     list_display = ["title"]
@@ -16,11 +18,13 @@ class CourseAdmin(admin.ModelAdmin):
     class Meta:
         model = Course
 
+
 class TaskAdmin(admin.ModelAdmin):
     list_display = ["id", "module"]
 
     class Meta:
         model = Task
+
 
 admin.site.register(Module, ModuleAdmin)
 admin.site.register(Course, CourseAdmin)
