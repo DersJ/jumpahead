@@ -131,3 +131,6 @@ dmypy.json
 
 #staticfiles
 /jumpahead/staticfiles/
+
+#vscode
+.vscode
