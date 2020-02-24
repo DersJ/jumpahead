@@ -1,13 +1,18 @@
 from django.db import models
 
 # Create your models here.
+class Course(models.Model):
+    title = models.CharField(max_length=500,null=True)
+    description = models.TextField(null=True)
+
 class Module(models.Model):
     video_link = models.URLField(max_length=250, blank=True)
     title = models.CharField(max_length=500)
     created = models.DateTimeField(auto_now=False, auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     description = models.TextField()
-    task_list = models.ForeignKey('TaskList', on_delete=models.CASCADE, blank=True, null=True)
+    course = models.ManyToManyField('modules.Course',related_name='modules')
 
-class TaskList(models.Model):
-    sample = models.CharField(max_length=200)
+class Task(models.Model):
+    module = models.ManyToManyField('modules.Module',related_name='tasks')
+    description = models.TextField()
