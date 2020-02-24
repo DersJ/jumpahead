@@ -43,3 +43,10 @@ DATABASE_URL= ...
 ### Run the local dev server
 1. In the root of this repo with your virtual environment active, run `python manage.py runserver` 
 2. Navigate to [127.0.0.1:8000]() in the browser
+
+
+### How to clear/seed the database
+1. Navigate to the project directory and run `python manage.py dbshell`
+2. Inside the pqsl shell run `truncate modules_course cascade;`
+3. Type `\q` and press enter to quit the shell
+4. Then run `python manage.py loaddata seedData.json` to seed the database
