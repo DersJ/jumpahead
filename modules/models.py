@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Course(models.Model):
-    title = models.CharField(max_length=500,null=True)
+    title = models.CharField(max_length=500, null=True)
     description = models.TextField(null=True)
 
 class Module(models.Model):
@@ -11,8 +11,12 @@ class Module(models.Model):
     created = models.DateTimeField(auto_now=False, auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     description = models.TextField()
-    course = models.ManyToManyField('modules.Course',related_name='modules')
+    course = models.ForeignKey(
+        "Course", on_delete=models.CASCADE, related_name="modules"
+    )
 
 class Task(models.Model):
-    module = models.ManyToManyField('modules.Module',related_name='tasks')
+    module = models.ForeignKey(
+        "modules.Module", on_delete=models.CASCADE, related_name="tasks"
+    )
     description = models.TextField()
