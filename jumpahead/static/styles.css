@@ -1,0 +1,16 @@
+.bg-primary {
+    background-color: rgb(92, 200, 142) !important;
+}
+
+.circle {
+    height: 70px;
+    width: 70px;
+    border-radius: 35px;
+    margin: auto;
+}
+
+.user-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
