@@ -51,3 +51,17 @@ DATABASE_URL= ...
 2. Inside the pqsl shell run `truncate modules_course cascade;`
 3. Type `\q` and press enter to quit the shell
 4. Then run `python manage.py loaddata seedData.json` to seed the database
+
+
+### Final Requirements
+Logic
+- Basic Permissions (have to be logged in to view pages)
+- Progress Bar Logic
+  - Task/Module Logic
+  - Progress based of User
+
+Pages
+- Base File - Header and Footer
+- Module List Page
+- Module Page (Details of module and interactions)
+  - Progress Bar
