@@ -28,6 +28,7 @@ Use `workon jumpahead` to activate your virtual environment, `deactivate` to dea
 ### Clone the repo and install requirements
 1. `git clone git@github.com:DersJ/jumpahead.git`
 2. `cd jumpahead && pip install -r requirements.txt`
+3. `pip install --upgrade django-crispy-forms`
 
 ### Set up environment variables
 In order to keep the database url and secret key secure, we abstract those values into environment variables. Locally, these will be stored in a file called `.env`. On heroku, they are stored in the `config vars` setting.
