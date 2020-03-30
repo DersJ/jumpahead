@@ -17,10 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from django.views.generic import TemplateView
+from modules import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='landing.html'), name='home'),
     path('account/', include('customauth.urls')),
-
+    path('modules/',views.moduleList)
 ]
