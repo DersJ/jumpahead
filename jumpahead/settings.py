@@ -30,6 +30,7 @@ DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = [
     'https://jumpahead.herokuapp.com/',
+    '127.0.0.1'
 ]
 
 
