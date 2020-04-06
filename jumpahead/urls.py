@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='landing.html'), name='home'),
     path('account/', include('customauth.urls')),
-    path('modules/',views.moduleList)
+    path('modules/', include('modules.urls')) 
 ]
