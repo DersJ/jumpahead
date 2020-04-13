@@ -15,14 +15,12 @@ class SignUpForm(UserCreationForm):
 		fields = ('username', 'first_name', 'last_name', 'email', 'date_of_birth', 'password1', 'password2', )
 
 
-# class UpdateProfileForm(ModelForm):
-# 	email = forms.EmailField(max_length=254, help_text='Inform a valid email address.')
-# 	phone = PhoneNumberField(label="Phone Number", help_text='We will never share your phone number with anyone.')
-# 	locations = forms.ModelMultipleChoiceField(queryset=Location.objects.all())
-# 	class Meta:
-# 		model = get_user_model()
-# 		fields = ('email', 'phone', 'locations', 'meals')
+class UpdateProfileForm(ModelForm):
+	email = forms.EmailField(max_length=254, help_text='Inform a valid email address.')
+	class Meta:
+		model = get_user_model()
+		fields = ('email',)
 	
-# 	def __init__(self, *args, **kwargs):
-# 		super(UpdateProfileForm, self).__init__(*args, **kwargs)
-# 		self.fields["locations"].widget = forms.widgets.CheckboxSelectMultiple()
+	def __init__(self, *args, **kwargs):
+		super(UpdateProfileForm, self).__init__(*args, **kwargs)
+		
