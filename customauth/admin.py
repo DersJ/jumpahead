@@ -28,6 +28,9 @@ class UserAdmin(auth_admin.UserAdmin):
             'groups'
             )
         }),
+        ('Subscription', {
+            'fields': ('active_subscription', 'subscription_start_date', 'subscription_end_date'),
+        }),
         ('Time Information', {
             'fields': ('time_created', 'time_updated'),
         }),
