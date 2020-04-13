@@ -6,7 +6,7 @@ from .models import *
 
 
 class ModuleAdmin(admin.ModelAdmin):
-    list_display = ["title", "video_link", "id", "last_updated", "created", "course"]
+    list_display = ["title", "video_link", "last_updated", "created", "course"]
 
     class Meta:
         model = Module
