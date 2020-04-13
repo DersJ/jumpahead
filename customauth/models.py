@@ -96,6 +96,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 
+    active_subscription = models.BooleanField(default=False)
+    subscription_start_date = models.DateField(blank=True, null=True)
+    subscription_end_date = models.DateField(blank=True, null=True)
+
+
     objects = UserManager()
 
     REQUIRED_FIELDS = ['email']

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="gray py-5 row">
+	<div class="offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+    {% if user.name %}
+    <h4>{{user.name}}</h4>
+    <h5>@{{user.username}}</h4>
+
+    {% else %}
+    <h4>@{{user.username}}</h4>
+    {% endif %}
+
+    <p>{{user.email}}</p>
+    
+    <h1>Account Preferences</h1>
+
+    <div class="my-4">
+        <h2>Subscription</h2>
+        <h4>Subscription status: {% if user.active_subscription %} Active {% else %} No subscription {% endif %}</h4>
+
+        {% if user.active_subscription %} 
+        <h5>Subscription Details</h5>
+        <p>Started on {{ user.subscription_start_date }} and ends on {{ user.subscription_end_date }}</p> 
+        
+        {% else %}{% endif %}
+    </div>
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-dark"type="submit">Save</button>
+    </form>
+</div>
+</div>
+
+
+    {% endblock %}

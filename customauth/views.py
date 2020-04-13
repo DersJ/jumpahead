@@ -6,7 +6,7 @@ from django.views import generic
 from django.contrib.auth import get_user_model
 
 
-from customauth.forms import SignUpForm
+from customauth.forms import SignUpForm, UpdateProfileForm
 
 # Create your views here.
 def loginview(request):
@@ -26,3 +26,21 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'account/signup.html', {'form': form})
+
+def profile(request):
+    if request.method == 'POST':
+        form = UpdateProfileForm(request.POST, instance=request.user)
+        if form.is_valid():
+            print("saved user")
+            form.save()
+            # username = form.cleaned_data.get('username')
+            # raw_password = form.cleaned_data.get('password1')
+            # user = authenticate(username=username, password=raw_password)
+            # login(request, user)
+            return redirect('/account/profile')
+    else:
+        initial = {
+            'email': request.user.email,
+            }
+        form = UpdateProfileForm(instance=request.user)
+    return render(request, 'account/profile.html', {'form': form, 'user': request.user})
