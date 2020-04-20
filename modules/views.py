@@ -32,4 +32,5 @@ class ModuleDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now() 
+        context['tasks'] = self.get_object().tasks.first().description.split('\n')
         return context

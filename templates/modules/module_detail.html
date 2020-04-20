@@ -8,15 +8,47 @@
         <h1>{{ object.title }}</h1>
         <small>Updated at {{object.last_updated}}</small>
         <div class="row h-100">
+                <div class="col-sm-3">
+                    <h3>Objectives:</h3>
+                </div>
+                <div class="col-sm-8">
+                    {{object.description}}
+                </div>
+                <div class="col-sm-3">
+                    <h3>Delivery Strategy:</h3>
+                </div>
+                <div class="col-sm-8">
+                    {{object.delivery_strategy}}
+                </div>
+                <div class="col-sm-3">
+                    <h3>Grouping Used:</h3>
+                </div>
+                <div class="col-sm-8">
+                    {{object.grouping_used}}
+                </div>
+                <div class="col-sm-3">
+                    <h3>Skills:</h3>
+                </div>
+                <div class="col-sm-8">
+                    {{object.skills}}
+                </div>
+                <div class="col-sm-3">
+                    <h3>Materials:</h3>
+                </div>
+                <div class="col-sm-8">
+                    {{object.materials}}
+                </div>
+            </div>
+        <div class="row h-100">
             <div class="col-sm-8">
                 <iframe width="100%" height="500px" min-height="290px" src="{{object.video_link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <br>
             </div>
             <div class="col-sm-4">
                 <ul class="list-unstyled list-group">
-                    <li class="list-group-item"><input type="checkbox">  1</li>
-                    <li class="list-group-item"><input type="checkbox">  2</li>
-                    <li class="list-group-item"><input type="checkbox">  3</li>
+                    {% for task in tasks%}
+                    <li class="list-group-item"><input type="checkbox">  {{ forloop.counter }}. {{task}}</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
