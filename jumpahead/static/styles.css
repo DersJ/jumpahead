@@ -3,9 +3,9 @@
 }
 
 .circle {
-    height: 70px;
-    width: 70px;
-    border-radius: 35px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
     margin: auto;
 }
 
@@ -13,4 +13,8 @@
     display: flex;
     flex-direction: column;
     align-content: center;
+}
+
+img {
+    max-width: 100%;
 }
