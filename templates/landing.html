@@ -4,15 +4,15 @@
 
 {% block main %}
 <div class="container-fluid">
-    <div class="row bg-primary">
+    <div class="row">
         <div class="col-sm-3 user-logo-container">
             <div class="circle bg-white text-center">
-<p>logo<p>
+                <img src="{% static 'smoothjumpaheadsticker.png' %}" width="100%" height="100%"> 
             </div>
 
         </div>
         <div class="col-sm-6 p-4">
-            <h1 class="display-4 text-light align-middle text-center">Jumpahead</h1>
+            <h1 class="display-4 text-dark align-middle text-center">Jumpahead</h1>
             <h2 class="display-5 text-light text-muted align-middle text-center">Jumpahead mission statement: To provide a safe, interactive environment for children to jump rope, have fun, and grow.</h2>
         </div>
         <div class="col-sm-3">
@@ -20,6 +20,54 @@
         </div>
         
     </div>
+   
+    <div class="container">
+        <br>
+        <div class="row justify-content-center">
+              <figure class="col-md-6">
+                  <img alt="mentor team photo" src="{% static 'team.jpg' %}" class="img-fluid">
+              </figure>
+    
+              <figure class="col-md-6">
+                  <img alt="jump ropes" src="{% static 'ropes.jpg' %}" class="img-fluid">
+              </figure>      
+        </div>
+        
+            
+        <div class="row justify-content-center">
+              <figure class="col-md-6">
+                  <img alt="student and mentor" src="{% static 'mentor2.jpg' %}" class="img-fluid">
+              </figure>
+    
+              <figure class="col-md-6">
+                  <img alt="still shot of bowl" src="{% static 'bowl.jpg' %}" class="img-fluid">
+            </figure>
+            
+        </div>
+            
+            <div class="row justify-content-center">
+              <figure class="col-md-6">
+                  <img alt="students stirring recipe" src="{% static 'stirring.jpg' %}" class="img-fluid">
+              </figure>
+    
+              <figure class="col-md-6">
+                  <img alt="students gathered around mentor cooking" src="{% static 'gather.jpg' %}" class="img-fluid">
+            </figure>
+            
+            </div>
+
+                
+        <div class="row justify-content-center">
+            <figure class="col-md-6">
+                <img alt="mentor helping student" src="{% static 'mentor.jpg' %}" class="img-fluid">
+            </figure>
+      
+          
+            <figure class="col-md-6">
+                  <img alt="kids jumping rope" src="{% static 'kids2.jpg' %}" class="img-fluid">
+            </figure>     
+        </div>
+        </div>
 </div>
 
 
