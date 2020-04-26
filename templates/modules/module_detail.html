@@ -7,38 +7,42 @@
     <div class="container h-100" style="margin-top:30px">
         <h1>{{ object.title }}</h1>
         <small>Updated at {{object.last_updated}}</small>
+        <br><br>
         <div class="row h-100">
                 <div class="col-sm-3">
-                    <h3>Objectives:</h3>
+                    <h6>Objectives:</h6>
                 </div>
                 <div class="col-sm-8">
-                    {{object.description}}
+                    {{object.description|linebreaks}}
                 </div>
                 <div class="col-sm-3">
-                    <h3>Delivery Strategy:</h3>
+                    <h6>Delivery Strategy:</h6>
                 </div>
                 <div class="col-sm-8">
-                    {{object.delivery_strategy}}
+                    {{object.delivery_strategy|linebreaks}}
                 </div>
                 <div class="col-sm-3">
-                    <h3>Grouping Used:</h3>
+                    <h6>Grouping Used:</h6>
                 </div>
                 <div class="col-sm-8">
-                    {{object.grouping_used}}
+                    {{object.grouping_used|linebreaks}}
                 </div>
                 <div class="col-sm-3">
-                    <h3>Skills:</h3>
+                    <h6>Skills:</h6>
                 </div>
                 <div class="col-sm-8">
-                    {{object.skills}}
+                    {{object.skills|linebreaks}}
                 </div>
                 <div class="col-sm-3">
-                    <h3>Materials:</h3>
+                    <h6>Materials:</h6>
                 </div>
                 <div class="col-sm-8">
-                    {{object.materials}}
+                    {{object.materials|linebreaks}}
                 </div>
-            </div>
+        </div>
+
+        <br>
+
         <div class="row h-100">
             <div class="col-sm-8">
                 <iframe width="100%" height="500px" min-height="290px" src="{{object.video_link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -47,11 +51,19 @@
             <div class="col-sm-4">
                 <ul class="list-unstyled list-group">
                     {% for task in tasks%}
-                    <li class="list-group-item"><input type="checkbox">  {{ forloop.counter }}. {{task}}</li>
+                    <li class="list-group-item"><input class="checks" type="checkbox" onclick="allChecks()">  {{ forloop.counter }}. {{task}}</li>
                     {% endfor %}
+                    <script>
+                        function allChecks() {
+                            if ($('.checks:checked').length == $('.checks').length) {
+                                console.log("congrats");
+                            }
+                        }
+                    </script>
                 </ul>
             </div>
         </div>
+        <br>
     </div>
 
 {% endblock %}
