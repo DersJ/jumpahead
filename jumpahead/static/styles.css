@@ -18,3 +18,17 @@
 img {
     max-width: 100%;
 }
+
+.modal-header {
+    background-color:  rgb(92, 200, 142);
+    color: white; 
+    height: 200%;
+}
+
+.btn-primary {
+    background-color: rgb(92, 200, 142);
+    border-color: rgb(92, 200, 142);
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: rgb(88, 184, 132);
+}
