@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Course
 from .models import Module
 from .models import Task
@@ -9,6 +9,8 @@ from django.views.generic.detail import DetailView
 # Create your views here.
 
 def moduleList(request):
+    if(not request.user.is_authenticated):
+        return redirect('home')
     # Get all modules from database
     queryset = Course.objects.all()
     
@@ -21,7 +23,6 @@ def moduleList(request):
 
 
 class ModuleDetailView(DetailView):
-
     model = Module
 
     def get_context_data(self, **kwargs):
