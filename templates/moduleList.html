@@ -5,7 +5,7 @@
 {% block content %}
 
 <div class="container-fluid">
-    {% for course, modules in courses.items %}
+    {% for course in courses %}
   
     <div class="row" >
         <div class="col-sm-3 p-4"></div>
@@ -14,7 +14,7 @@
                 {{course.title}}
             </h2>
             <ul class="list-group" >
-                {% for module in modules%}
+                {% for module in course.modules.all|dictsort:"title"%}
                 <li class="list-group-item" align='center' style="color:#f8f9fa;background-color:#6c757d;"><a href="/modules/{{module.pk}}" style="color: white;">{{module.title}}</a></li>
                 {% endfor %}
                 <br/>

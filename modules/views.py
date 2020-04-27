@@ -10,15 +10,10 @@ from django.views.generic.detail import DetailView
 
 def moduleList(request):
     # Get all modules from database
-    queryset = Module.objects.all()
+    queryset = Course.objects.all()
     
     # Create course dict with modules
-    courses = {}
-    for module in queryset:
-        if module.course not in courses:
-            courses[module.course] = []
-        courses[module.course].append(module)
-    
+    courses = sorted(queryset, key=lambda x: x.title, reverse=False)
     context = {
         "courses":courses
     }
