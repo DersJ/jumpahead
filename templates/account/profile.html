@@ -22,9 +22,10 @@
         {% if user.active_subscription %} 
         <p>Started on {{ user.subscription_start_date }} and ends on {{ user.subscription_end_date }}</p>
         
-        <button class="btn btn-secondary">Manage subscription</button>
         
         {% else %}{% endif %}
+        <button class="btn btn-secondary">Manage subscription</button>
+
     </div>
     
     <form method="post">
