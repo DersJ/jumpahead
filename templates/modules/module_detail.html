@@ -4,7 +4,11 @@
 
 {% block main %}
 
+    
+
     <div class="container h-100" style="margin-top:30px">
+        {% if request.user.active_subscription %}
+
         <h1>{{ object.title }}</h1>
         <small>Updated at {{object.last_updated}}</small>
         <br><br>
@@ -87,7 +91,15 @@
             </div>
         </div>
         <br>
-    </div>
+    
+
+    {% else %}
+
+    <p>Your account does not have an active subscription. To access this module, add a subscription on your <a class="" href="{% url 'profile' %}">account</a> page.</p>
+
+    {% endif %}
+
+</div>
 
 
 {% endblock %}
